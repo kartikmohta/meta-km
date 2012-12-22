@@ -1,0 +1,54 @@
+--- apache-log4cxx-0.10.0/src/examples/cpp/console.cpp	2008-03-31 18:34:52.000000000 -0400
++++ apache-log4cxx-0.10.0/src/examples/cpp/console.cpp	2010-07-13 18:03:22.208221793 -0400
+@@ -22,6 +22,8 @@
+ #include <log4cxx/logmanager.h>
+ #include <iostream>
+ #include <locale.h>
++#include <stdio.h>
++#include <string.h>
+ 
+ using namespace log4cxx;
+ using namespace log4cxx::helpers;
+--- apache-log4cxx-0.10.0/src/main/cpp/inputstreamreader.cpp	2008-03-31 18:34:09.000000000 -0400
++++ apache-log4cxx-0.10.0/src/main/cpp/inputstreamreader.cpp	2010-07-13 17:59:31.592192235 -0400
+@@ -14,7 +14,7 @@
+  * See the License for the specific language governing permissions and
+  * limitations under the License.
+  */
+-
++#include <string.h>
+ #include <log4cxx/logstring.h>
+ #include <log4cxx/helpers/inputstreamreader.h>
+ #include <log4cxx/helpers/exception.h>
+--- apache-log4cxx-0.10.0/src/main/cpp/socketoutputstream.cpp	2008-03-31 18:34:09.000000000 -0400
++++ apache-log4cxx-0.10.0/src/main/cpp/socketoutputstream.cpp	2010-07-13 18:02:10.836185509 -0400
+@@ -15,6 +15,7 @@
+  * limitations under the License.
+  */
+ 
++#include <string.h>
+ #include <log4cxx/logstring.h>
+ #include <log4cxx/helpers/socketoutputstream.h>
+ #include <log4cxx/helpers/socket.h>
+--- apache-log4cxx-0.10.0/src/main/include/log4cxx/private/Makefile.am~	2010-07-13 18:24:42.432205540 -0400
++++ apache-log4cxx-0.10.0/src/main/include/log4cxx/private/Makefile.am	2010-07-13 18:33:25.424698169 -0400
+@@ -14,7 +14,7 @@
+ # limitations under the License.
+ #
+ privateincdir = $(includedir)/log4cxx/private
+-privateinc_HEADERS= $(top_builddir)/src/main/include/log4cxx/private/*.h log4cxx_private.h
++privateinc_HEADERS= $(top_builddir)/src/main/include/log4cxx/private/*.h
+ DISTCLEANFILES = log4cxx_private.h
+ EXTRA_DIST = log4cxx_private.hw
+ 
+--- apache-log4cxx-0.10.0/src/main/include/log4cxx/Makefile.am~	2010-07-13 18:33:33.968212507 -0400
++++ apache-log4cxx-0.10.0/src/main/include/log4cxx/Makefile.am	2010-07-13 18:33:40.120197310 -0400
+@@ -15,7 +15,7 @@
+ #
+ SUBDIRS = helpers net nt rolling spi varia xml config db private pattern filter
+ log4cxxincdir = $(includedir)/log4cxx
+-log4cxxinc_HEADERS= $(top_srcdir)/src/main/include/log4cxx/*.h log4cxx.h
++log4cxxinc_HEADERS= $(top_srcdir)/src/main/include/log4cxx/*.h
+ DISTCLEANFILES = log4cxx.h
+ EXTRA_DIST = log4cxx.hw
+ 
