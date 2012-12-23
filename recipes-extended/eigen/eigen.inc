@@ -16,3 +16,7 @@ OECMAKE_BUILDPATH = "build"
 EXTRA_OECMAKE += "-Dpkg_config_libdir=${libdir}"
 
 FILES_${PN} = "${includedir} ${libdir}"
+
+# ${PN} is empty so we need to tweak -dev and -dbg package dependencies
+RDEPENDS_${PN}-dev = ""
+RRECOMMENDS_${PN}-dbg = "${PN}-dev (= ${EXTENDPKGV})"
