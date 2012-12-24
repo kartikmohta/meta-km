@@ -1,11 +1,11 @@
 This layer depends on:
 
 URI: git://git.yoctoproject.org/poky.git
-branch: master
+branch: danny
 revision: HEAD
 
 URI: git://git.openembedded.org/meta-openembedded
-branch: master
+branch: danny
 revision: HEAD
 
 Main layer maintainer: Kartik Mohta <kartikmohta@gmail.com>
