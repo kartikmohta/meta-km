@@ -1,0 +1,11 @@
+--- electric/stacks/ros_comm/utilities/rostime/CMakeLists.txt~	2012-12-22 13:59:11.109277260 -0500
++++ electric/stacks/ros_comm/utilities/rostime/CMakeLists.txt	2012-12-22 13:59:15.501347990 -0500
+@@ -26,7 +26,7 @@
+   src/rate.cpp
+   src/duration.cpp
+   )
+-rosbuild_link_boost(${PROJECT_NAME} thread)
++rosbuild_link_boost(${PROJECT_NAME} thread system)
+
+ if (NOT APPLE)
+ target_link_libraries(${PROJECT_NAME} rt)

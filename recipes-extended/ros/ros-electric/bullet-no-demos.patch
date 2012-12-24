@@ -1,0 +1,11 @@
+--- ros/stacks/bullet/Makefile.bullet	Wed Feb 09 22:23:45 2011 -0800
++++ ros/stacks/bullet/Makefile.bullet	Thu Feb 10 22:00:17 2011 -0500
+@@ -51,7 +51,7 @@
+ 
+ 
+ installed: wiped $(SOURCE_DIR)/unpacked
+-	cd $(SOURCE_DIR) && cmake -DCMAKE_INSTALL_PREFIX=$(CURDIR) -DCMAKE_CXX_FLAGS="-fPIC -DBT_USE_DOUBLE_PRECISION" -D BUILD_SHARED_LIBS=on . 
++	cd $(SOURCE_DIR) && cmake -DCMAKE_INSTALL_PREFIX=$(CURDIR) -D USE_DOUBLE_PRECISION=on -D BUILD_SHARED_LIBS=on -D USE_GLUT=off -D BUILD_DEMOS=off . 
+ 	# Bullet appears not be parallel-make safe
+ 	#cd $(SOURCE_DIR) && make $(PARALLEL_JOBS) 
+ ifneq ($(MAKE),)

@@ -1,0 +1,10 @@
+--- electric/stacks/ros_comm/tools/rosbag/CMakeLists.txt~	2012-12-22 04:31:48.278582224 -0500
++++ electric/stacks/ros_comm/tools/rosbag/CMakeLists.txt	2012-12-22 04:31:38.198417578 -0500
+@@ -28,6 +28,7 @@
+
+ rosbuild_add_executable(record src/record.cpp)
+ target_link_libraries(record rosbag)
++rosbuild_link_boost(record system)
+
+ rosbuild_add_executable(play src/play.cpp)
+ target_link_libraries(play rosbag)

@@ -1,0 +1,11 @@
+--- electric/stacks/geometry/tf/CMakeLists.txt~	2012-12-22 04:34:48.105517972 -0500
++++ electric/stacks/geometry/tf/CMakeLists.txt	2012-12-22 04:34:54.325620961 -0500
+@@ -9,7 +9,7 @@
+ rosbuild_gensrv()
+
+ rosbuild_add_library(tf src/tf.cpp src/transform_listener.cpp src/cache.cpp src/transform_broadcaster.cpp)
+-rosbuild_link_boost(tf thread signals)
++rosbuild_link_boost(tf thread signals system)
+
+ # Debug
+ rosbuild_add_executable(bin/empty_listener src/empty_listener.cpp)

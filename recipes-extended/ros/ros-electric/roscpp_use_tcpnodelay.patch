@@ -1,0 +1,11 @@
+--- electric/stacks/ros_comm/clients/cpp/roscpp/CMakeLists.txt~	2012-02-14 22:58:07.000000000 -0500
++++ electric/stacks/ros_comm/clients/cpp/roscpp/CMakeLists.txt	2012-02-14 23:14:26.000000000 -0500
+@@ -8,6 +8,8 @@
+ set(ROS_BUILD_TYPE RelWithDebInfo)
+ #set(ROS_BUILD_TYPE Debug)
+ 
++add_definitions(-DROSCPP_USE_TCP_NODELAY)
++
+ rosbuild_init()
+ rosbuild_genmsg()
+ rosbuild_gensrv()

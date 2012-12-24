@@ -1,0 +1,10 @@
+--- electric/stacks/orocos_kinematics_dynamics/orocos_kdl/CMakeLists.txt~	2012-06-12 17:48:15.000000000 -0400
++++ electric/stacks/orocos_kinematics_dynamics/orocos_kdl/CMakeLists.txt	2012-06-12 17:49:13.000000000 -0400
+@@ -4,6 +4,7 @@
+ CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+ #MARK_AS_ADVANCED( FORCE CMAKE_BACKWARDS_COMPATIBILITY )
+ 
++set( CMAKE_TOOLCHAIN_FILE $ENV{ROS_ROOT}/rostoolchain.cmake )
+ 
+ ###################################################
+ #                                                 #

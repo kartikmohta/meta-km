@@ -1,0 +1,9 @@
+HISTCONTROL=ignoreboth
+
+source /opt/ros/setup-env.sh
+export ROS_PACKAGE_PATH=$HOME/ros:${ROS_PACKAGE_PATH}
+export CC="gcc -march=armv7-a -mcpu=cortex-a8 -mfpu=neon -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed"
+export CXX="g++ -march=armv7-a -mcpu=cortex-a8 -mfpu=neon -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed"
+export FC="gfortran -march=armv7-a -mcpu=cortex-a8 -mfpu=neon -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed"
+
+alias rosmake="rosmake --no-rosdep"

@@ -1,0 +1,11 @@
+--- electric/stacks/orocos_kinematics_dynamics/python_orocos_kdl/cmake/FindSIP.cmake~	2012-01-05 02:40:30.219761660 -0500
++++ electric/stacks/orocos_kinematics_dynamics/python_orocos_kdl/cmake/FindSIP.cmake	2012-01-05 02:40:52.544023538 -0500
+@@ -31,7 +31,7 @@
+   SET(SIP_FOUND TRUE)
+ ELSE(SIP_VERSION)
+ 
+-  FIND_FILE(_find_sip_py FindSIP.py PATHS ${CMAKE_MODULE_PATH})
++  FIND_FILE(_find_sip_py FindSIP.py PATHS ${CMAKE_MODULE_PATH} NO_CMAKE_FIND_ROOT_PATH)
+ 
+   EXECUTE_PROCESS(COMMAND ${PYTHON_EXECUTABLE} ${_find_sip_py} OUTPUT_VARIABLE sip_config)
+   IF(sip_config)
