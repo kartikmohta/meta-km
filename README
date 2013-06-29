@@ -8,6 +8,10 @@ URI: git://git.openembedded.org/meta-openembedded
 branch: dylan
 revision: HEAD
 
+URI: git@github.com:gumstix/meta-gumstix.git
+branch: danny
+revision: HEAD
+
 Main layer maintainer: Kartik Mohta <kartikmohta@gmail.com>
 
 All metadata is MIT licensed unless otherwise stated. Source code included
